@@ -5,6 +5,7 @@ import Produtos from './components/Produtos';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Contato from './components/Contato';
+import Produto from './components/Produto';
 
 const App = () => {
   return (
@@ -14,8 +15,8 @@ const App = () => {
         <div className="content">
           <Routes>
             <Route path="/" element={<Produtos />} />
+            <Route path="produto/:id" element={<Produto />} />
             <Route path="/contato" element={<Contato />} />
-            <Route path="/contact" element={<div>Contact</div>} />
           </Routes>
         </div>
         <Footer />
