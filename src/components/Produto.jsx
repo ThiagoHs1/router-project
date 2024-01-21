@@ -25,7 +25,7 @@ const Produto = () => {
     fetchData(`https://ranekapi.origamid.dev/json/api/produto/${id}`);
   }, [id]);
 
-  if (loading) return <div>Carregando...</div>;
+  if (loading) return <div className="loading"></div>;
   if (error) return <p>{error}</p>;
 
   if (!produto) return null;
@@ -39,8 +39,6 @@ const Produto = () => {
         <h1>{produto.nome}</h1>
         <span className={styles.preco}>R$ {produto.preco}</span>
         <p className={styles.descricao}>{produto.descricao}</p>
-        <h3>Fotos</h3>
-        {/* Aqui você pode adicionar um loop para exibir as fotos, se houver */}
       </div>
     </section>
   );
